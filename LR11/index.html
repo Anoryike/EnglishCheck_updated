@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="icon" href="icon.png">
+    <title>Контроль вивчення іноземної мови</title>
+</head>
+<body>
+    <div class="overlay">
+        <div class="difficulty">
+            <label for="difficulty-select">Виберіть рівень складності:</label>
+            <select id="difficulty-select">
+                <option value="easy">Легкий</option>
+                <option value="medium">Середній</option>
+                <option value="hard">Важкий</option>
+            </select>
+            <button class="start-btn">Почати тест</button>
+        </div>
+        <div class="flashcard">
+            <div class="card">
+                <div class="front">
+                    <p>Слово на іноземній мові</p>
+                </div>
+                <div class="back">
+                    <input type="text" placeholder="Введіть переклад" class="input-field">
+                    <button class="check-btn">Перевірити</button>
+                    <button class="refresh-btn" style="display: none;">Оновити</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="progress">
+            <p class="progress-text">Крок <span class="current-step">1</span> з <span class="total-steps">10</span></p>
+            <div class="status">
+                <div class="correct-status">
+                    <p>Вірно: <span class="correct-count">0</span></p>
+                </div>
+                <div class="incorrect-status">
+                    <p>Не вірно: <span class="incorrect-count">0</span></p>
+                </div>
+            </div>
+        </div>
+      
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <p>Рівень знань мови: <span class="level"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
